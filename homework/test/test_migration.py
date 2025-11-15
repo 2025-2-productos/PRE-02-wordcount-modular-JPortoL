@@ -1,8 +1,11 @@
 import os
 
-from ./wordcount import main
+from ..src.wordcount import main
+
 
 def test_migracion():
+
+    main()
 
     if not os.path.exists("data/output/results.tsv"):
         raise FileNotFoundError("El archivo results.tsv no existe.")
