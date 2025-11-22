@@ -11,7 +11,8 @@ from ._internals.write_word_counts import write_word_counts
 def main():
     if len(sys.argv) != 3:
         print("Usage: python wordcount.py <input_folder> <output_folder>")
-        sys.exit(1)
+        # sys.exit(1)
+        return
 
     input_folder = sys.argv[1]
     output_folder = sys.argv[2]
@@ -21,6 +22,7 @@ def main():
     words = split_into_words(all_lines)
     counter = count_words(words)
     write_word_counts(counter, output_folder)
+
 
 
 if __name__ == "__main__":
